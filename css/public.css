@@ -1,0 +1,935 @@
+@import "base.css";
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /*font-size:16px;*/
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*头部开始*/
+/*<!--头部城市切换、意见反馈、咨询热线-->*/
+.qzlead-top {
+    width: 100%;
+    height: 35px;
+    background: #fff;
+}
+
+.qzlead-top-center {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.qzlead-area {
+    width: auto;
+    min-width: 95px;
+    height: 100%;
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.qzlead-area-active {
+    box-sizing: border-box;
+    border: 1px solid #d8d8d8;
+    border-bottom: none;
+}
+
+.qzlead-area > i {
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    color: #0cb46a;
+    float: left;
+}
+
+.qzlead-area > p {
+    color: #333;
+    float: left;
+    line-height: 35px;
+}
+
+.qzlead-area > span {
+    color: #0cb46a;
+    line-height: 35px
+}
+
+/*定位所有的城市开始*/
+.qzlead-town {
+    position: absolute;
+    left: -1px;
+    top: 35px;
+    width: 410px;
+    height: auto;
+    z-index: 30;
+    background: #fff;
+    display: none;
+}
+
+.qzlead-town-title {
+    padding: 0px 30px;
+    height: 40px;
+    border: 1px #d8d8d8 solid;
+    border-bottom: none;
+}
+
+.qzlead-town-title > li {
+    margin-right: 10px;
+    color: #333;
+    padding: 0px 3px;
+    font-size: 12px;
+    float: left;
+    cursor: pointer;
+    line-height: 37px;
+}
+
+.qzlead-line {
+    color: #0cb46a !important;
+    border-bottom: 2px solid #0cb46a;
+}
+
+.qzlead-town-title > li:last-child {
+    margin-right: 0px;
+}
+
+.qzlead-town-list {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.qzlead-town-item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 410px;
+    height: auto;
+    background: #fff;
+    border: 1px #d8d8d8 solid;
+    padding: 10px 0px;
+}
+
+.qzlead-hot {
+    padding: 0px 30px;
+}
+
+.qzlead-hot > li {
+    float: left;
+    width: 62px;
+    overflow: hidden;
+    text-align: left;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+.qzlead-hot > li > a {
+    color: #666;
+}
+
+.qzlead-hot > li > a:hover {
+    color: #0cb46a;
+}
+
+/*定位所有的城市结束*/
+.qzlead-top-right {
+    float: right;
+    min-width: 240px;
+    height: 100%;
+    position: relative;
+}
+
+.qzlead-idea {
+    display: inline-block;
+    height: 14px;
+    margin-top: 11px;
+    font-size: 14px;
+    padding: 0px 14px;
+    color: #999;
+    line-height: 14px;
+    border-right: 1px solid #999;
+}
+
+.qzlead-idea:hover {
+    color: #0cb46a;
+}
+
+.qzlead-top-right > p {
+    float: right;
+    height: 100%;
+    color: #ff5a00;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.qzlead-top-right > p > i {
+    margin-top: 9px;
+    font-size: 12px;
+}
+
+.qzlead-top-right > p > span {
+    line-height: 35px;
+}
+
+/*联系巧装家弹出框*/
+.qzlead-contact {
+    position: absolute;
+    top: 35px;
+    right: -10px;
+    width: 245px;
+    height: 210px;
+    padding: 15px 20px;
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px #ccc;
+    display: none;
+    z-index: 50;
+}
+
+.qzlead-contact > p {
+    width: 100%;
+    color: #999;
+    text-align: center;
+    font-size: 20px;
+}
+
+.qzlead-contact > input {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px rgb(221, 221, 221) solid;
+    width: 100%;
+    height: 20%;
+    padding-left: 10px;
+}
+
+.qzlead-contact > button {;
+    color: #fff;
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: #05B56A;
+    margin-top: 12px;
+    margin-bottom: 10px
+}
+
+.qzlead-contact > span {
+    display: inline;
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+/*<!--logo、首页、搜索-->*/
+.qzlead-bottom {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    position: relative;
+    transition: all 0.7s;
+}
+.qzlead-bottom-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.7s;
+    z-index: 200;
+    -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+}
+
+
+.qzlead-bottom-center {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.qzlead-logo {
+    width: 144px;
+    height: 32px;
+    margin-top: 24px;
+    float: left;
+}
+
+.qzlead-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.qzlead-list {
+    height: 100%;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+}
+
+.qzlead-list-li {
+    float: left;
+    height: 80px;
+    line-height: 20px;
+    padding: 0px 20px 0px 10px;
+}
+
+.qzlead-list-li > a {
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.qzlead-list-a {
+    padding-bottom: 35px;
+    border-bottom: 2px solid #05B56A;
+    color: #05B56A !important;
+}
+
+.qzlead-list > li:last-child {
+    margin-right: 0px;
+}
+
+.qzlead-list-li > a > span {
+    float: left;
+    height: 100%;
+    margin-right: 5px;
+}
+
+.icon-img {
+    display: block;
+    float: left;
+    width: 7px;
+    height: 4px;
+    margin-top: 8px;
+    background: url("../image/icon-img_03.png") no-repeat center;
+    background-size: cover;
+}
+.icon-img-top {
+    display: block;
+    float: left;
+    width: 7px;
+    height: 4px;
+    margin-top: 8px;
+    background: url("../image/icon-img_05.png") no-repeat center;
+    background-size: cover;
+}
+
+.qzlead-search {
+   float: right;
+    margin-top: 23px;
+    width: 260px;
+    height: 34px;
+    border: 1px solid #e5e5e5;
+}
+
+.qzlead-search > input {
+    display: block;
+    width: 220px;
+    padding-left: 10px;
+    height: 100%;
+    float: left;
+}
+
+.qzlead-search > i {
+    display: block;
+    width: 20px;
+    height: 100%;
+    font-size: 20px;
+    color: #05B56A;
+    float: left;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/*移入速表出现的样式*/
+
+.qzlead-result {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: auto;
+    padding-top: 36px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 200;
+    display: none;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+}
+
+.qzlead-effect {
+    position: relative;
+    float: left;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.qzlead-effect > li {
+    width: auto;
+    min-width: 100px;
+    max-width: 190px;
+    float: left;
+    border-right: 1px solid #ccc;
+    margin-right: 40px;
+}
+
+.qzlead-effect > li:last-child {
+    margin-right: 0px;
+    border-right: none;
+}
+
+.qzlead-effect-li {
+    min-width: 280px !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.qzlead-effect-title > a {
+    display: inline-block;
+}
+
+.qzlead-effect-title > a > span {
+    font-size: 14px;
+    color: #333;
+}
+
+.qzlead-effect-title > a > span:hover {
+    color: #05B56A;
+}
+
+.qzlead-effect-title > a > i {
+    font-size: 14px;
+    color: #333;
+}
+
+.qzlead-effect-word {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.qzlead-effect-word > a {
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.qzlead-effect-name > a {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.qzlead-effect-word > a > span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+}
+
+.qzlead-effect-word > a > span:hover {
+    color: #05B56A;
+}
+
+.qzlead-effect-disign {
+    min-width: 60px;
+    width: auto;
+    height: 70px;
+    float: left;
+    margin-right: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.qzlead-effect-disign:last-child {
+    margin-right: 0px;
+}
+
+.qzlead-effect-disign > a {
+    display: block;
+    color: #333;
+}
+
+.qzlead-effect-disign > a:hover {
+    color: #05B56A;
+}
+
+.qzlead-effect-disign > a > i {
+    display: block;
+    font-size: 40px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.qzlead-effect-disign > a > span {
+    font-size: 14px;
+    text-align: center;
+    line-height: 38px;
+}
+
+/*头部结束*/
+
+/*报价框开始*/
+.qzoffer {
+    position: fixed;
+    left: 0px;
+    bottom: -360px;
+    width: 100%;
+    height: 435px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 1s;
+    z-index: 100;
+}
+
+.qzofferdo {
+    bottom: 0px;
+    transition: all 1s;
+}
+
+.qzoffer-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1200px;
+    height: 80px;
+    margin: auto;
+}
+
+.qzoffer-img {
+    position: absolute;
+    left: 20%;
+    top: -85px;
+    width: 100px;
+    height: 160px;
+}
+
+.qzoffer-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.qzoffer-top p {
+    position: relative;
+    float: left;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+}
+
+.qzoffer-image {
+    position: absolute;
+    right: 20%;
+    top: 0px;
+    width: 45px;
+    height: 48px;
+    cursor: pointer;
+    background: url("../image/001.png") no-repeat center;
+    background-size: 100%;
+    animation: download 1s infinite ease-in-out;
+}
+
+.qzoffer-image-down {
+    position: absolute;
+    right: 20%;
+    top: 10px;
+    width: 45px;
+    height: 48px;
+    cursor: pointer;
+    background: url("../image/002.png") no-repeat center;
+    background-size: 100%;
+
+}
+
+@-moz-keyframes download {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@-webkit-keyframes download {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@-ms-keyframes download {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes download {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+.qzoffer-close {
+
+}
+
+.qzoffer-bottom {
+    width: 980px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 80px;
+    position: relative;
+}
+
+.qzoffer-budget {
+    float: left;
+    padding: 24px 40px 20px 40px;
+    height: 330px;
+}
+
+.qzoffer-budget > h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.qzoffer-budget > h3 > span {
+    margin-left: 10px;
+    color: #f36f20;
+    font-size: 12px;;
+}
+
+.qzoffer-form {
+    width: 370px;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.qzoffer-form-list {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px
+}
+
+.qzoffer-form-listdo {
+    height: 90px;
+}
+
+.qzoffer-form-list > p {
+    float: left;
+    width: 24.5%;
+    padding-right: 8px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333;
+
+}
+
+.qzoffer-form-list > p > span {
+    font-size: 24px;
+    color: #fe5f00;
+    vertical-align: middle;
+}
+
+.qzoffer-select {
+    float: right;
+    width: 265px;
+    height: 100%;
+    position: relative;
+}
+
+#select-city {
+    display: block;
+    float: left;
+    width: 40%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+#select-dist {
+    display: block;
+    float: left;
+    width: 60%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.qzoffer-select > input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+.qzoffer-select > span {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #ccc;
+}
+
+.qzoffer-selectdo {
+    float: right;
+    width: 265px;
+    height: 40px;
+    position: relative;
+}
+
+.qzoffer-home {
+    display: block;
+    width: 85px;
+    height: 40px;
+    float: left;
+    outline: navajowhite;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.qzoffer-home:last-child {
+    margin-right: 0px;
+}
+
+.qzoffer-rest {
+    display: block;
+    width: 130px;
+    height: 40px;
+    float: left;
+    outline: navajowhite;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.qzoffer-rest:last-child {
+    margin-right: 0px;
+}
+
+.qzoffer-selectdo-top {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.qzoffer-selectdo-bottom {
+    width: 100%;
+    height: 40px;
+}
+
+.qzoffer-cost {
+    float: right;
+    width: 340px;
+    color: #333;
+    font-size: 14px;
+    margin-right: 40px;
+    margin-top: 13px;
+    padding: 0;
+}
+
+.qzoffer-cost-budget {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+.qzoffer-cost-budget > span {
+    display: inline-block;
+    width: 120px;
+    color: #ff5a00;
+    font-size: 30px;
+    text-align: center;
+}
+
+.qzoffer-cost-budget > em {
+    font-size: 16px;
+}
+
+.qzoffer-cost-material {
+    width: 338px;
+    height: 188px;
+    border: 1px solid #e8e8e8;
+    margin-top: 12px;
+}
+
+.qzoffer-cost-material > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 36px;
+}
+
+.qzoffer-cost-material > span:first-child {
+    margin-top: 20px;
+}
+
+.qzoffer-cost-material > span > i {
+    display: inline-block;
+    width: 80px;
+    color: #ff5a00;
+    font-size: 14px;
+    text-align: center;
+}
+
+.qzoffer-cost-material > span > em {
+    font-size: 12px;
+}
+
+.qzoffer-star {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.qzoffer-circle-shadow {
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #ff6d15;
+    animation: circle-scale 1.5s infinite ease-in-out;
+}
+
+@keyframes circle-scale {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+    }
+}
+
+.qzoffer-circle {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ff6d15;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    padding-top: 10px;
+}
+
+/*报价框结束*/
+/*尾部开始*/
+.qzfoot {
+    width: 100%;
+    height: 190px;
+    margin-top: 40px;
+    background: #1f1f1f;;
+}
+
+.qzfoot-center {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.qzfoot-list {
+    padding: 30px 0px;
+}
+
+.qzfoot-list > li {
+    float: left;
+    margin-right: 17px;
+    font-size: 12px;
+
+}
+
+.qzfoot-list > li > a {
+    color: #fff;
+}
+
+.qzfoot-word {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: left;
+    color: #83888a;
+}
+
+.qzfoot-char {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    height: 130px;
+    width: 100px;
+    text-align: center;
+}
+
+.qzfoot-char img {
+    display: block;
+    width: 100%;
+}
+
+.qzfoot-char span {
+    font-size: 12px;
+    color: #fff;
+}
+
+/*尾部结束*/

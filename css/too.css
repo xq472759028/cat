@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+/*底部浮层样式开始*/
+
+.fixeFooter {
+    border: 0px;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background: rgba(0, 0, 0, .7);
+    bottom: -90px;
+    left: 0px;
+    z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -1px 8px;
+}
+
+.fixeFooter > div {
+    width: 1200px;
+    margin: 0px auto;
+    height: 100%;
+}
+
+.fixeFooter > div > div:first-child {
+    position: relative;
+    float: left;
+    width: 274px;
+}
+
+@keyframes liftRight {
+    0% {
+        left: 80px;
+        opacity: .8
+    }
+    50% {
+        left: 101px;
+        opacity: 1
+    }
+    100% {
+        left: 80px;
+        opacity: .8
+    }
+}
+
+@-webkit-keyframes liftRight
+    /* Safari 与 Chrome */
+
+{
+    0% {
+        left: 80px;
+        opacity: .8
+    }
+    50% {
+        left: 101px;
+        opacity: 1
+    }
+    100% {
+        left: 80px;
+        opacity: .8
+    }
+}
+
+.fixeFooter > div > div:first-child > img {
+    position: absolute;
+    top: 24px;
+    animation: liftRight 1s infinite linear;
+    -webkit-animation: liftRight 1s infinite linear;
+    /* Safari 与 Chrome */
+}
+
+.fixeFooter > div > div:first-child > p {
+    padding-left: 1px;
+    font-size: 34px;
+    color: #ef880c;
+    line-height: 34px;
+    margin-top: 20px;
+}
+
+.fixeFooter > div > div:first-child > span {
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+}
+
+.fixeFooter > div > div:first-child > span > em {
+    margin: 0 3px;
+    font-style: normal;
+    font-weight: bolder;
+    font-family: arial;
+}
+
+.fixeFooter > div > .quotedPrice{
+    float: left;
+    margin-top: 20px;
+    padding-right: 15px;
+    width: 256px;
+    text-align: right;
+    color: #fff;
+}
+.fixeFooter > div > .quotedPrice > span{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+}
+.fixeFooter > div > .quotedPrice > strong{
+    display: inline-block;
+    width: 160px;
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: normal;
+}
+.fixeFooter > div > .quotedPrice > i{
+    display: inline-block;
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    vertical-align: top;
+    background: #ffa31f;
+    font: normal 12px/16px normal;
+    text-align: center;
+}
+.fixeFooter > div > div:last-child {
+    position: relative;
+    float: right;
+    width: 670px;
+}
+
+.fixeFooter > div > div:last-child > img {
+    position: absolute;
+    top:20px;
+    right: -45px;
+    cursor: pointer;
+}
+
+.fixeFooter > div > div:last-child > input {
+    display: block;
+    float: left;
+    border: none;
+    color: #fff;
+    width: 160px;
+    background: #333;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    padding: 0px 18px;
+    margin: 20px 10px 0px 0px;
+}
+
+.fixeFooter > div > div:last-child > i{
+    position: absolute;
+    top: 32px;
+    left: 130px;
+    z-index: 1;
+    color: #999;
+    font-style: normal;
+}
+
+.fixeFooter > div > div:last-child .button {
+    margin-right: 0;
+    background: #ef880c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fixeFooterOn {
+    display: none;
+    position: fixed;
+    padding: 0 10px;
+    width: 60px;
+    height: 163px;
+    top: 70%;
+    right: 40px;
+    z-index: 11;
+    background: #ffa31f;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 22px;
+    line-height: 1.1;
+}
+.fixeFooterOn img{ margin: 5px 0 15px 0;}
+
+@keyframes liftRight2 {
+    0% {
+        left: 16px
+    }
+    50% {
+        left: 4px
+    }
+    100% {
+        left: 16px
+    }
+}
+
+@-webkit-keyframes liftRight2
+    /* Safari 与 Chrome */
+{
+    0% {
+        left: 16px
+    }
+    50% {
+        left: 4px
+    }
+    100% {
+        left: 16px
+    }
+}
+
+.fixeFooterOn > img {
+    position: relative;
+    top: 14px;
+    animation: liftRight2 1s infinite linear;
+    -webkit-animation: liftRight2 1s infinite linear;
+    /* Safari 与 Chrome */
+}
+
+/*底部浮层样式结束*/
+
+
+/*选择城市样式开始*/
+
+.selectCity {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+.selectCity > div:first-child {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.selectCity > div:last-child {
+    position: relative;
+    margin: 0px auto;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    width: 610px;
+    top: 30%;
+    min-height: 20px;
+    z-index: 1;
+}
+
+.selectCity > div:last-child > img {
+    position: absolute;
+    cursor: pointer;
+    top: -17px;
+    right: -20px;
+    z-index: 1;
+}
+
+.selectCity > div:last-child > div {
+    height: 81px;
+    margin: 0px auto;
+    width: 550px;
+    border-bottom: 1px solid rgb(217, 217, 217);
+    line-height: 24px;
+    padding-top: 36px;
+}
+
+.selectCity > div:last-child > div > h2 {
+    float: left;
+}
+
+.selectCity > div:last-child > div > p {
+    float: right;
+    margin-right: 10px;
+    color: rgb(153, 153, 153);
+}
+
+.selectCity > div:last-child > div > p > a {
+    margin-left: 10px;
+    color: rgb(85, 85, 85);
+}
+
+.selectCity > div:last-child > div > p > a:hover {
+    margin-left: 10px;
+    color: #ec6c00;
+}
+
+.selectCity > div:last-child > ul {
+    display: block;
+    width: 550px;
+    margin: 22px auto;
+    columns: 250px 3;
+    padding-bottom: 28px;
+}
+
+.selectCity > div:last-child > ul > li {
+    line-height: 39px;
+}
+
+.selectCity > div:last-child > ul > li > b {
+    font-weight: normal;
+    font-family: arial;
+    margin-right: 14px;
+    float: left;
+    color: rgb(136, 136, 136);
+}
+
+.selectCity > div:last-child > ul > li > a {
+    color: rgb(85, 85, 85);
+    margin-right: 14px;
+}
+
+.selectCity > div:last-child > ul > li > a:hover {
+    color: #ec6c00;
+    margin-right: 14px;
+}
+
+
+/*选择城市样式结束*/
+
+
+/*右侧浮层样式开始*/
+
+.fixeRight {
+    position: fixed;
+    right: 40px;
+    width: 60px;
+    height: 311px;
+    top: 26%;
+    background: rgb(255, 255, 255);
+    z-index: 11;
+    opacity: 1;
+}
+
+.fixeRight a {
+    display: block;
+    position: relative;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: rgb(136, 136, 136);
+    width: 100%;
+}
+
+.fixeRight a:nth-child(1) {
+    height: 64px;
+    border-top: 1px solid rgb(233, 233, 233);
+    border-right: 1px solid rgb(233, 233, 233);
+    border-bottom: none;
+    border-left: 1px solid rgb(233, 233, 233);
+    border-image: initial;
+    padding-top: 42px;
+    cursor: pointer;
+    z-index: 11;
+    background: url("../img/fixe_new/fixe_call.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_call.png*/ center center no-repeat rgb(255, 255, 255);
+}
+
+.fixeRight a:nth-child(1):hover {
+    background: url("../img/fixe_new/fixe_call_1.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_call_1.png*/ center center no-repeat rgb(255, 163, 31);
+    border-color: rgb(255, 163, 31);
+    color: #fff;
+}
+
+.fixeRight a:nth-child(2) {
+    height: 64px;
+    border-top: 1px solid rgb(233, 233, 233);
+    border-right: 1px solid rgb(233, 233, 233);
+    border-bottom: none;
+    border-left: 1px solid rgb(233, 233, 233);
+    border-image: initial;
+    padding-top: 42px;
+    cursor: pointer;
+    z-index: 11;
+    background: url("../img/fixe_new/fixe_about.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_about.png*/ center center no-repeat rgb(255, 255, 255);
+}
+
+.fixeRight a:nth-child(2):hover {
+    background: url("../img/fixe_new/fixe_about_1.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_about_1.png*/ center center no-repeat rgb(255, 163, 31);
+    border-color: rgb(255, 163, 31);
+    color: #fff;
+}
+
+.fixeRight a:nth-child(3) {
+    height: 64px;
+    border-top: 1px solid rgb(233, 233, 233);
+    border-right: 1px solid rgb(233, 233, 233);
+    border-bottom: none;
+    border-left: 1px solid rgb(233, 233, 233);
+    border-image: initial;
+    padding-top: 42px;
+    cursor: pointer;
+    z-index: 11;
+    background: url("../img/fixe_new/fixe_price.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_price.png*/ center center no-repeat;
+}
+
+.fixeRight a:nth-child(3):hover {
+    background: url("../img/fixe_new/fixe_price_1.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_price_1.png*/ center center no-repeat rgb(255, 163, 31);
+    border-color: rgb(255, 163, 31);
+    color: #fff;
+}
+
+.fixeRight a:nth-child(4) {
+    height: 64px;
+    border-top: 1px solid rgb(233, 233, 233);
+    border-right: 1px solid rgb(233, 233, 233);
+    border-bottom: none;
+    border-left: 1px solid rgb(233, 233, 233);
+    border-image: initial;
+    padding-top: 42px;
+    cursor: pointer;
+    z-index: 11;
+    background: url("../img/fixe_new/fixe_ma.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_ma.png*/ center center no-repeat;
+}
+
+.fixeRight a:nth-child(4):hover,.fixeRight a:nth-child(4).hover {
+    background: url("../img/fixe_new/fixe_ma_1.png")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_ma_1.png*/ center center no-repeat rgb(255, 163, 31);
+    border-color: rgb(255, 163, 31);
+    color: #fff;
+}
+
+.fixeRight a:nth-child(4) > div {
+    display: none;
+    position: absolute;
+    left: -195px;
+    top: -192px;
+    width: 175px;
+    height: 311px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 52px rgba(163, 163, 163, 0.15);
+    padding-top: 18px;
+    text-align:center;
+    font-size:14px;
+    opacity: 1;
+    color: #333;
+}
+
+.fixeRight a:nth-child(4).hover > div{
+    display:block;
+}
+.fixeRight a:nth-child(4) > div > p{
+    margin-bottom: 10px;
+}
+.fixeRight a:nth-child(4) > div > p > span {
+    display:block;
+    margin-top: 3px;
+    line-height:18px;
+}
+.fixeRight a:nth-child(4) > div > p:first-child{
+    letter-spacing:2px;
+}
+.fixeRight a:nth-child(4) > div > p > img {
+    width:95px;
+    height:95px;
+}
+.fixeRight a:nth-child(4) > div > p > em {
+    display:block;
+    color: #ffa31f;
+    line-height: 16px;
+    font-style: normal;
+}
+
+.fixeRight a:nth-child(4) > div > img {
+    position: absolute;
+    right: -12px;
+    bottom: 80px;
+}
+
+.fixeRight a:nth-child(5) {
+    height: 55px;
+    border: 1px solid rgb(233, 233, 233);
+    padding-top: 45px;
+    cursor: pointer;
+    z-index: 11;
+    background: url("../img/fixe_new/fixe_top.jpg")/*tpa=http://sh.ikongjian.com/assets/2017pc/img/fixe_new/fixe_top.jpg*/ center center no-repeat;
+}
+
+
+/*右侧浮层样式结束*/

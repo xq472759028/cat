@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>【北京装修】北京装修公司-北京爱巧装家装修网</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <!--底部浮层和右侧浮层样式-->
+    <!--<link rel="stylesheet" href="css/too.css">-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sliphover.min.js"></script>
+    <!--导航栏-->
+    <script src="js/nav.js"></script>
+    <!--首页第一轮播图-->
+    <script src="js/banner.min.js"></script>
+    <!--点击跳转-->
+    <script src="js/reservation.js"></script>
+    <!--报价-->
+    <script src="js/RES.js"></script>
+    <script src="js/function.js"></script>
+    <!--slider插件-->
+    <script src="js/banner.super.js"></script>
+    <script src="js/swiper.min.js"></script>
+</head>
+<body>
+
+<!--头部开始-->
+<div class="head">
+    <div class="headNav">
+        <div class="width1200 fm">
+            <!--LOGO-->
+            <a class="logo" href="index.html">
+                <img src="image/qzj.png" alt="巧装家标准化家装"></a>
+            <!--导航-->
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="fitment.html">臻品套餐
+                            <img class="hot" src="image/hot.gif" alt="HOT">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="case.html">经典案例</a>
+                    </li>
+                    <li data-nav="0">
+                        <a href="design.html">设计师
+                            <!--<img class="navIcon" src="image/nav.png" alt="展开">-->
+                            <img class="navNew" src="image/new_3.png" alt="NEW">
+                        </a>
+                    </li>
+                    <li data-nav="1">
+                        <a href="gonglue.html">装修攻略
+                            <!--<img class="navIcon" src="image/nav.png" alt="展开">-->
+                        </a>
+                    </li>
+                    <li data-nav="2">
+                        <a href="soft.html">全屋软装
+                            <!--<img class="navIcon" src="image/nav.png" alt="展开">-->
+                        </a>
+                    </li>
+                </ul>
+                <div class="navCode">
+                    <!--<a>-->
+                    <!--<img class="app" src="image/nav_app.png" alt="APP">-->
+                    <!--<div class="navApp">-->
+                    <!--<img class="navMa" src="image/app.png" alt="巧装家"><br>-->
+                    <!--<span>下载巧装家APP</span><br>-->
+                    <!--<i>一站式装修神器</i>-->
+                    <!--</div>-->
+                    <!--</a>-->
+                    <a>
+                        <img class="weixin" src="image/nav_weixin.png" alt="微信小程序">
+                        <div class="navWeixin">
+                            <img class="navMa" src="image/app.jpg" alt="巧装家-小程序"><br>
+                            <span>扫描小程序</span><br>
+                            <!--<i>看装修直播</i>-->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Banner开始-->
+<div class="homeBanner banner">
+    <ul>
+        <li>
+            <a href="test.html" target="_blank"
+               style="background:url('image/banner1.jpg') no-repeat center top;background-size: cover"></a>
+            <h2>装修小测试2.0-pc</h2>
+        </li>
+        <li>
+            <a href="test.html" target="_self"
+               style="background:url('image/banner2.jpg') no-repeat center top;background-size: cover"></a>
+            <h2>2018爱粉节</h2>
+        </li>
+    </ul>
+    <div class="houmeNumber Number"></div>
+    <a href="javascript:void(0);" class="prev houmePrev">&nbsp;</a>
+    <a href="javascript:void(0);" class="next houmeNext">&nbsp;</a>
+    <div class="homeBanneraAbout">
+        <div>
+            <h2>0元免费设计</h2><span class="places"></span></div>
+        <input class="name" type="text" id="userName" placeholder="请输入您的称呼">
+        <input class="tel" type="text" id="mobile" placeholder="填写手机号码，获取免费设计名额">
+        <input class="button" type="button" id="submitBtn" value="立即领取">
+        <script type="text/javascript">
+            $(function () {
+                $.post('/getPlaces', {}, function (data) {
+                    $(".places").text("今日还剩" + data + "个名额");
+                })
+                $('#submitBtn').click(function () {
+                    var msg = $.reservation($('#userName').val(), $('#mobile').val(), function () {
+                        _paq.push(['trackEvent', 'Clicked', '首页BANNER预约按钮点击量统计', '首页BANNER预约按钮点击量统计']);
+                    });
+                    if (msg.indexOf("预约成功") >= 0) {
+                        setTimeout(function () {
+                            ga('send', 'event', '浮层预约成功', 'Click');
+                            aboutOk();
+                        }, 1000);
+                    } else {
+                        alert(msg);
+                    }
+                })
+            });
+        </script>
+    </div>
+</div>
+<!--品牌实力-->
+<div class="homeBrand active" data-offset="500">
+    <div class="homeTitle">
+        <h2><span>品牌实力</span>
+            <hr>
+        </h2>
+        <p>毋庸置疑的品牌实力 品质保证高端体验</p>
+    </div>
+    <!--极致人性-->
+    <div class="homeBrandBanner banner">
+        <ul>
+            <li>
+                <a href="fitment.html#space-all" rel="nofollow"
+                   onclick="_paq.push(['trackEvent', 'Clicked', '首页品牌实例', '极致人性']);">
+                    <div class="left hover">
+                        <p>用我的坚持，<br>为你的品质生活打Call</p>
+                    </div>
+                    <div class="right">
+                        <i><img src="image/brand_0_1.png" alt="老板电器 - 油烟机"></i>
+                        <h3>老板电器 - 油烟机</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="homeBrandNumber Number"></div>
+        <div class="homeBrandJzrx">选好材<br>用好牌</div>
+    </div>
+    <!--儿童级环保-->
+    <a href="fitment.html#protection" rel="nofollow" class="homeBrandQwhb homeBrandBack">
+        <img class="homeBrandQwhbBack" src="image/brand_2.jpg" alt="全屋环保">
+        <img class="homeBrandQwhbName" src="image/brand_2_1.png" alt="全屋环保">
+    </a>
+    <!--全屋配置-->
+    <a href="fitment.html#space-all" rel="nofollow" class="homeBrandBack">
+        <img class="homeBrandQwhbBack" src="image/brand_3.jpg" alt="刘利年">
+        <img class="homeBrandQwhbName" src="image/brand_3_1.png" alt="名师设计">
+    </a>
+    <!--省心体验-->
+    <a href="" rel="nofollow"
+       class="homeBrandBack">
+        <img class="homeBrandQwhbBack" src="image/brand_4.jpg" alt="马可波罗 老板 科勒 大自然地板">
+        <img class="homeBrandQwhbName" src="image/brand_4_1.png" alt="名品大牌">
+    </a>
+    <!--直管工人-->
+    <a href="" rel="nofollow" class="homeBrandBack mr0">
+        <img class="homeBrandQwhbBack" src="image/brand_5.jpg" alt="直管工人">
+        <img class="homeBrandQwhbName" src="image/brand_5_1.png" alt="直管工人">
+    </a>
+    <!--臻选套餐-->
+    <a href="javascript:;" class="homeBrandTc homeBrandBack">
+        <img class="homeBrandQwhbBack homeBrandQwhbBack1" src="image/brand_6.jpg" alt="臻选套餐">
+        <img class="homeBrandQwhbIcon" src="image/brand_6_1.png">
+    </a>
+</div>
+<!--计算器-->
+<div class="homeOf active" data-offset="1000">
+    <div class="homeTitle">
+        <h2><span>尊享服务</span>
+            <hr>
+        </h2>
+        <p>10秒计算报价，滴滴免费接驾</p>
+    </div>
+    <div class="homeOfTab">
+        <a id="tab021" onclick="set('tab02',1,3)" class="hover">
+            <img src="image/jsq_jsq.png">
+            <span>装修报价</span>
+        </a>
+        <a id="tab022" onclick="set('tab02',2,3)">
+            <img src="image/jsq_fq.png">
+            <span>装修分期</span>
+        </a>
+        <a id="tab023" onclick="set('tab02',3,3)">
+            <img src="image/jsq_didi.png">
+            <span>滴滴专车接送</span>
+        </a>
+    </div>
+    <div class="homeOfBat">
+        <!--计算器-->
+        <div id="tab02_1" class="homeOfJsq">
+            <div class="homeOfJsqLeft">
+                <h2>装修要花多少钱?<span>目前已有<em>534694</em>人获取装修报价</span></h2>
+                <p>
+                    <span>装修城市</span>
+                    <select class="zxbj_areaCode">
+                        <option value="">请选择</option>
+
+                        <option value="101">北京</option>
+                    </select>
+                </p>
+                <p>
+                    <span>房屋面积</span>
+                    <input id="huxing_Mj" class="zxbj_area" type="text" placeholder="请输入房屋面积">
+                    <i>㎡</i>
+                </p>
+                <p>
+                    <span>您的姓名</span>
+                    <input type="text" class="zxbj_username" placeholder="请输入您的姓名">
+                </p>
+                <p class="mr0">
+                    <span>您的手机</span>
+                    <input type="text" class="zxbj_mobile" placeholder="请输入您的手机号码">
+                </p>
+                <p id="Huxing">
+                    <span>房屋户型</span>
+                    <select>
+                        <option>1室</option>
+                        <option>2室</option>
+                        <option>3室</option>
+                        <option>4室</option>
+                    </select>
+                    <select>
+                        <option>1厅</option>
+                        <option>2厅</option>
+                    </select>
+                    <select>
+                        <option>1厨</option>
+                    </select>
+                    <select>
+                        <option>1卫</option>
+                        <option>2卫</option>
+                    </select>
+                </p>
+                <input type="button" class="zxbj_submitBtn" value="立即获取报价">
+            </div>
+            <img class="homeOfJsqRight" src="image/jsq_img1.jpg">
+        </div>
+        <!--分期-->
+        <div id="tab02_2" class="homeOfFq" style="display: none">
+            <div class="homeOfFqcLeft">
+                <h2>10秒计算分期额度<span>目前已有<em>534694</em>人获取分期信息</span></h2>
+                <p>
+                    <span>装修城市</span>
+                    <select class="fq_areaCode">
+                        <option value="">请选择</option>
+                        <option value="101">北京</option>
+                    </select>
+                </p>
+                <p>
+                    <span>房屋面积</span>
+                    <input type="text" class="fq_area" placeholder="请输入房屋面积">
+                    <i>㎡</i>
+                </p>
+                <p>
+                    <span>分期期数</span>
+                    <select class="fq_qs">
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        <option value="18">18</option>
+                        <option value="24">24</option>
+                        <option value="30">30</option>
+                        <option value="36">36</option>
+                    </select>
+                </p>
+                <p>
+                    <span>您的姓名</span>
+                    <input class="w260 fq_username" type="text" placeholder="请输入您的姓名">
+                </p>
+                <p class="mr0">
+                    <span>您的手机</span>
+                    <input class="w260 fq_mobile" type="text" placeholder="请输入您的手机号码">
+                </p>
+                <input type="button" class="fq_submitBtn" value="立即计算">
+            </div>
+            <div class="homeOfFqcRight">
+                <img src="image/jsq_img2.jpg">
+                <p>
+                    <span>
+                        预估装修金额
+                        <b class="fq_ygje">???元</b>
+                    </span>
+                    <span>
+                        预估贷款金额
+                        <b class="fq_ygje">???元</b>
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        分期数
+                        <b class="fq_fqs">?期</b>
+                    </span>
+                    <span>
+                        每月应还
+                        <b class="fq_yh">???元</b>
+                    </span>
+                </p>
+                <div>
+                    每天仅需
+                    <b class="fq_dh">???元</b>
+                    <span>(以上计算信息仅供参考)</span>
+                </div>
+            </div>
+        </div>
+        <!--滴滴-->
+        <div id="tab02_3" class="homeOfDidi">
+            <div class="homeOfDidiLeft">
+                <h2>滴滴免费专车看展厅<span>目前已接送<em>534694</em>人到店参观</span></h2>
+                <p>
+                    <span>装修城市</span>
+                    <select name="dd_areaCode">
+                        <option value="">请选择</option>
+                        <option value="101">北京</option>
+                    </select>
+                </p>
+                <p>
+                    <span>您的姓名</span>
+                    <input class="w260" type="text" name="dd_username" placeholder="请输入您的姓名">
+                </p>
+                <p class="mr0">
+                    <span>您的手机</span>
+                    <input class="w260" type="text" name="dd_mobile" placeholder="请输入您的手机号码">
+                </p>
+                <input type="button" name="dd_submitBtn" value="立即预约">
+            </div>
+            <img class="homeOfDidiRight" src="image/jsq_img3.jpg">
+        </div>
+    </div>
+</div>
+<!--3D样板间-->
+<div class="home3d active" data-offset="1000">
+    <div class="homeTitle">
+        <h2><span>3D样板间</span>
+            <hr>
+        </h2>
+        <p>毋庸置疑的品牌实力 品质保证高端体验</p>
+    </div>
+    <div class="home3dSlider slider">
+        <div class="bd">
+            <ul>
+                <li>
+                    <img class="bdImg" src="image/3d_1.jpg" alt="【67㎡】一居室 时尚 简约 清新">
+                    <div class="home3dName">
+                        <img src="image/3d_1_1.png" alt="23°呼吸">
+                        <p>
+                            <em>【67㎡】一居室</em>
+                            <span><i>时尚</i><i>简约</i><i>清新</i></span>
+                        </p>
+                        <a class="backOrange" rel="nofollow" target="_blank" href="javascript:;">沉浸式体验</a>
+                        <a href="javascript:;"  rel="nofollow" class="backOrange1">预约参观</a>
+                    </div>
+                </li>
+                <li>
+                    <img class="bdImg" src="image/3d_2.jpg">
+                    <div class="home3dName">
+                        <img src="image/3d_2_1.png" alt="原木空间">
+                        <p>
+                            <em>【88㎡】二居室</em>
+                            <span><i>自然</i><i>质朴</i><i>闲适</i></span>
+                        </p>
+                        <a class="backOrange" rel="nofollow" target="_blank" href="">沉浸式体验</a>
+                        <a onclick="RES.order();" rel="nofollow">预约参观</a>
+                    </div>
+                </li>
+                <li>
+                    <img class="bdImg" src="image/3d_3.jpg">
+                    <div class="home3dName">
+                        <img src="image/3d_3_1.png">
+                        <p>
+                            <em>【158㎡】三居室</em>
+                            <span><i>浪漫</i><i>温馨</i><i>典雅</i></span>
+                        </p>
+                        <a class="backOrange" rel="nofollow" target="_blank">沉浸式体验</a>
+                        <a onclick="RES.order();" rel="nofollow">预约参观</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="pnBtn prev" data-click="left"><span class="blackBg"></span></div>
+        <div class="pnBtn next" data-click="right"><span class="blackBg"></span></div>
+    </div>
+</div>
+<!--服务流程-->
+<div class="homeService active" data-offset="1100">
+    <div class="homeTitle">
+        <h2><span>服务流程</span>
+            <hr>
+        </h2>
+        <p>一站式体验 标准化服务为您省心省力 品质保证高端体验</p>
+    </div>
+    <div class="homeServiceIcon">
+        <div>
+            <img src="image/service_1.png" alt="在线预约">
+            <p>在线预约</p>
+            <span>专属客服一对一回访</span>
+        </div>
+        <div>
+            <img src="image/service_2.png" alt="邀请到店">
+            <p>邀请到店</p>
+            <span>参观线下实景样板间</span>
+        </div>
+        <div>
+            <img src="image/service_3.png" alt="确定方案">
+            <p>确定方案</p>
+            <span>设计师上门量房</span>
+        </div>
+        <div>
+            <img src="image/service_4.png" alt="签订合同">
+            <p>签订合同</p>
+            <span>签订合同及交付装修款</span>
+        </div>
+        <div>
+            <img src="image/service_5.png" alt="装修施工">
+            <p>装修施工</p>
+            <span>严格按照巧装家标准化<br>施工原则施工交付</span>
+        </div>
+        <div>
+            <img src="image/service_6.png" alt="竣工验收">
+            <p>竣工验收</p>
+            <span>验收通过全屋装修指标</span>
+        </div>
+        <div>
+            <img src="image/service_7.png" alt="装修保障">
+            <p>装修保障</p>
+            <span>享受国家标准质保</span>
+        </div>
+    </div>
+</div>
+<!--经典案例-->
+<div class="homeCaseBox">
+    <div class="line"></div>
+    <div id="homeCaseSlide" class="homeCase active" data-offset="1100">
+        <div class="homeTitle">
+            <h2><span>经典案例</span>
+                <hr>
+            </h2>
+            <p>精美案例真实呈现 你家也可以这样装</p>
+        </div>
+        <div class="hd">
+            <ul>
+                <li>简约</li>
+                <li>欧式</li>
+                <li>田园</li>
+                <li>中式</li>
+                <li>意大利</li>
+            </ul>
+            <a class="more" href="case.html">更多</a>
+        </div>
+        <div class="bd">
+            <ul id="homeCase">
+                <li>
+                    <div>
+                        <a href="">
+                            <img src="image/df5c29999cc5b4a87646bd1bf9b7ab8d.jpg"
+                                 title="<h3>嘉宝梦之缘</h3><p>一居室【114.0m²】</p>">
+                        </a>
+                        <h3>嘉宝梦之缘</h3>
+                        <p>一居室【114.0m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/45d4a7cd7528f40ea462b5c564a7d1cc.jpg"
+                                 title="<h3>岚皋馨苑</h3><p>二居室【78.88m²】</p>">
+                        </a>
+                        <h3>岚皋馨苑</h3>
+                        <p>二居室【78.88m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/9401f5a1726dfa0f04ba94af350d2942.jpg"
+                                 title="<h3>惠德公寓</h3><p>三居室【178.0m²】</p>">
+                        </a>
+                        <h3>惠德公寓</h3>
+                        <p>三居室【178.0m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/2461ae87831952f807dd845fdd76a3a4.jpg"
+                                 title="<h3>锦绣华都</h3><p>二居室【95.0m²】</p>">
+                        </a>
+                        <h3>锦绣华都</h3>
+                        <p>二居室【95.0m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/ca149b5e406de2703148e35c649d46c6.jpg"
+                                 title="<h3>上城名都</h3><p>三居室【120.6m²】</p>">
+                        </a>
+                        <h3>上城名都</h3>
+                        <p>三居室【120.6m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/5538b24fcfecba7469cb7b284dc97dc9.jpg"
+                                 title="<h3>菊泉公寓</h3><p>一居室【45.0m²】</p>">
+                        </a>
+                        <h3>菊泉公寓</h3>
+                        <p>一居室【45.0m²】</p>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div>
+                        <a href="">
+                            <img src="image/5c6a925ffefc1cbdc0e5edc6d22a675b.jpg"
+                                 title="<h3>浦江华侨城</h3><p>一居室【60.0m²】</p>">
+                        </a>
+                        <h3>浦江华侨城</h3>
+                        <p>一居室【60.0m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/2aa51a448b4752a76331ae82d0d5914d.jpg"
+                                 title="<h3>滨江晶典</h3><p>二居室【120.0m²】</p>">
+                        </a>
+                        <h3>滨江晶典</h3>
+                        <p>二居室【120.0m²】</p>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div>
+                        <a href="">
+                            <img src="image/b7d6dcfe7361a0097e28851218c9bfbb.jpg"
+                                 title="<h3>恒盛鼎城华公馆</h3><p>二居室【160.0m²】</p>">
+                        </a>
+                        <h3>恒盛鼎城华公馆</h3>
+                        <p>二居室【160.0m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/bf8aa6f97a18571b787bb551ced4c99b.jpg"
+                                 title="<h3>世和园</h3><p>一居室【155.0m²】</p>">
+                        </a>
+                        <h3>世和园</h3>
+                        <p>一居室【155.0m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/753010275346fa4a24b0fd172bed9025.jpg"
+                                 title="<h3>民庆家园</h3><p>一居室【160.0m²】</p>">
+                        </a>
+                        <h3>民庆家园</h3>
+                        <p>一居室【160.0m²】</p>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div>
+                        <a href="">
+                            <img src="image/ef0067ac6e121966987fecf7381e957b.jpg"
+                                 title="<h3>繁荣昌盛</h3><p>二居室【82.62m²】</p>">
+                        </a>
+                        <h3>繁荣昌盛</h3>
+                        <p>二居室【82.62m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/2307a1627e68bfb1b29be4f0b3bf9fbe.jpg"
+                                 title="<h3>盛世壹品</h3><p>四居室【191.24m²】</p>">
+                        </a>
+                        <h3>盛世壹品</h3>
+                        <p>四居室【191.24m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/a3026b31fda100de6fcb38bb2511b9ff.jpg"
+                                 title="<h3>灵石LOFT公寓</h3><p>三居室【58.0m²】</p>">
+                        </a>
+                        <h3>灵石LOFT公寓</h3>
+                        <p>三居室【58.0m²】</p>
+                    </div>
+
+                    <div>
+                        <a href="">
+                            <img src="image/e0743af1796f239925101d7158735ea3.jpg"
+                                 title="<h3>汤臣湖庭花园二期</h3><p>四居室【181.0m²】</p>">
+                        </a>
+                        <h3>汤臣湖庭花园二期</h3>
+                        <p>四居室【181.0m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/237a0b7504f0746a98d173fa8236b5db.jpg"
+                                 title="<h3>通联公寓</h3><p>三居室【132.0m²】</p>">
+                        </a>
+                        <h3>通联公寓</h3>
+                        <p>三居室【132.0m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/ec47314f97fb94cec2e43451de0c9903.jpg"
+                                 title="<h3>河滨新苑</h3><p>一居室【93.0m²】</p>">
+                        </a>
+                        <h3>河滨新苑</h3>
+                        <p>一居室【93.0m²】</p>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div>
+                        <a href="">
+                            <img src="image/18b6cdbc122421201f8186a5efacf51a.jpg"
+                                 title="<h3>大华颐和华城</h3><p>二居室【160.0m²】</p>">
+                        </a>
+                        <h3>大华颐和华城</h3>
+                        <p>二居室【160.0m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/dae04ef1eee72ceb6b2ba7a7dad2b399.jpg"
+                                 title="<h3>金领华庭</h3><p>三居室【135.0m²】</p>">
+                        </a>
+                        <h3>金领华庭</h3>
+                        <p>三居室【135.0m²】</p>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="image/36548bef1fdb9ad6a5fb50d1aa57145a.jpg"
+                                 title="<h3>恒盛鼎城圣都汇</h3><p>二居室【160.0m²】</p>">
+                        </a>
+                        <h3>恒盛鼎城圣都汇</h3>
+                        <p>二居室【160.0m²】</p>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="recommendCase">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>- 大户型 -</h3>
+                        <p>南华苑</p>
+                        <span>四居室【195.0m²】</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3>- 小户型 -</h3>
+                        <p>万邦都市花园</p>
+                        <span>一居室【35.0m²】</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3>- 性价比首选 -</h3>
+                        <p>海派青城</p>
+                        <span>二居室【78.86m²】</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h3>- 颜值推荐 -</h3>
+                        <p>汤臣湖庭花园二期</p>
+                        <span>四居室【181.0m²】</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--设计师-->
+<div class="index-designer-container">
+    <div class="index-designer-center">
+        <div class="subhead white-subhead">
+            <h2>你的专属设计师</h2>
+            <h5>梦想设计师触动你的灵感</h5>
+        </div>
+        <div class="index-designer-content">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-shade"></div>
+                        <div class="designer-anli" style="background-image: url('image/555bf686fee6ad972aa4dac522737bea.jpg');">
+                            <a href="" target="_blank">
+                                <div>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="designer-info">
+                            <a href="" target="_blank">
+                                <div class="designerImg" style="background-image: url('image/design.png');"></div>
+                            </a>
+                            <div>
+                                <h2>DESIGNER</h2>
+                                <h3>郭永伟&nbsp;<span>资深设计师</span></h3>
+                                <h5>专业强 实力派 认真</h5>
+                                <h5>擅长风格：</h5>
+                                <h5>北欧风格、现代简约风格、美式风格、中式风格、地中海风格、后现代风格等</h5>
+                                <h5>从业时间：<span>16年</span>&nbsp;作品：<span>4</span></h5>
+                                <a href="javascript:;" target="_blank">
+                                    <div class="designer-btn">预约设计师</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-shade"></div>
+                        <div class="designer-anli" style="background-image: url('image/bf8aa6f97a18571b787bb551ced4c99b.jpg');">
+                            <a href="" target="_blank">
+                                <div>
+                                    <p>
+                                        本案为一栋两层别墅，业主为一个三口之家，结合业主的喜好，设计风格定位为简约欧式，简欧风格的室内设计打破以往欧式深沉的色彩，大量使用的白色调，把欧式风格设计融入现代设计中浑然一体家居风格，白色调时尚温馨不突兀。</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="designer-info">
+                            <a href="" target="_blank">
+                                <div class="designerImg"
+                                     style="background-image: url('image/design.png');"></div>
+                            </a>
+                            <div>
+                                <h2>DESIGNER</h2>
+                                <h3>张强&nbsp;<span>首席设计师</span></h3>
+                                <h5>服务好 专业 零投诉</h5>
+                                <h5>擅长风格：</h5>
+                                <h5>现代简约、北欧简约、欧式、美式、新中式、地中海等</h5>
+                                <h5>从业时间：<span>10年</span>&nbsp;作品：<span>6</span></h5>
+                                <a href="javascript:;" target="_blank">
+                                    <div class="designer-btn">预约设计师</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-shade"></div>
+                        <div class="designer-anli" style="background-image: url('image/e0743af1796f239925101d7158735ea3.jpg');">
+                            <a href="" target="_blank">
+                                <div>
+                                    <p>
+                                        拥有着现代简约的都市情怀精英们，大多数所向往的栖息环境不过是简单、舒适、温暖，百郎园的这套作品业主为年轻的公司高管，一家三口居住，偶尔会有老人小住，本案设计将原本空间利用率较低的原始户型，设计出高空间可视观赏度与高空间利用率相统一的简约温暖之家。</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="designer-info">
+                            <a href="" target="_blank">
+                                <div class="designerImg"
+                                     style="background-image: url('image/design.png');"></div>
+                            </a>
+                            <div>
+                                <h2>DESIGNER</h2>
+                                <h3>李静静&nbsp;<span>首席设计师</span></h3>
+                                <h5>真诚 专业 直爽</h5>
+                                <h5>擅长风格：</h5>
+                                <h5>欧式新古典、现代简约、北欧、地中海、田园、新中式</h5>
+                                <h5>从业时间：<span>10年</span>&nbsp;作品：<span>6</span></h5>
+                                <a href="javascript:;" target="_blank">
+                                    <div class="designer-btn">预约设计师</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-shade"></div>
+                        <div class="designer-anli" style="background-image: url('image/mkbl_bg.jpg');">
+                            <a href="" target="_blank">
+                                <div>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="designer-info">
+                            <a href="" target="_blank">
+                                <div class="designerImg"
+                                     style="background-image: url('image/design.png');"></div>
+                            </a>
+                            <div>
+                                <h2>DESIGNER</h2>
+                                <h3>宋昱萱&nbsp;<span>首席设计师</span></h3>
+                                <h5>时尚 专业 服务好</h5>
+                                <h5>擅长风格：</h5>
+                                <h5>简约，简欧，地中海，新中式，美式，后现在，新古典</h5>
+                                <h5>从业时间：<span>11年</span>&nbsp;作品：<span>14</span></h5>
+                                <a href="javascript:;" target="_blank">
+                                    <div class="designer-btn">预约设计师</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-shade"></div>
+                        <div class="designer-anli" style="background-image: url('image/555bf686fee6ad972aa4dac522737bea.jpg');">
+                            <a href="" target="_blank">
+                                <div>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="designer-info">
+                            <a href="" target="_blank">
+                                <div class="designerImg"
+                                     style="background-image: url('image/design.png');"></div>
+                            </a>
+                            <div>
+                                <h2>DESIGNER</h2>
+                                <h3>吕剑超&nbsp;<span>首席设计师</span></h3>
+                                <h5>设计好 专业强 认真</h5>
+                                <h5>擅长风格：</h5>
+                                <h5>现代简约、美式乡村、地中海、新中式、新古典、东南亚、田坎、简欧</h5>
+                                <h5>从业时间：<span>9年</span>&nbsp;作品：<span>3</span></h5>
+                                <a href="javascript:;" target="_blank">
+                                    <div class="designer-btn">预约设计师</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-shade"></div>
+                        <div class="designer-anli" style="background-image: url('image/753010275346fa4a24b0fd172bed9025.jpg');">
+                            <a href="" target="_blank">
+                                <div>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="designer-info">
+                            <a href="" target="_blank">
+                                <div class="designerImg"
+                                     style="background-image: url('image/design.png');"></div>
+                            </a>
+                            <div>
+                                <h2>DESIGNER</h2>
+                                <h3>郭永伟&nbsp;<span>资深设计师</span></h3>
+                                <h5>专业强 实力派 认真</h5>
+                                <h5>擅长风格：</h5>
+                                <h5>北欧风格、现代简约风格、美式风格、中式风格、地中海风格、后现代风格等</h5>
+                                <h5>从业时间：<span>16年</span>&nbsp;作品：<span>4</span></h5>
+                                <a href="javascript:;" target="_blank">
+                                    <div class="designer-btn">预约设计师</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-white designer-swiper-btn">
+                    <div></div>
+                </div>
+                <div class="swiper-button-next swiper-button-white designer-swiper-btn">
+                    <div></div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
+                </div>
+            </div>
+            <a href="" class="designer-more" target="_blank">更多设计师<i></i></a>
+        </div>
+    </div>
+</div>
+<!--品牌动态-->
+<div class="homeNamic active" data-offset="1100">
+    <div class="homeTitle">
+        <h2><span>品牌动态</span>
+            <hr>
+        </h2>
+        <p><a rel="nofollow" href="" target="_blank">查看更多>></a>
+        </p>
+    </div>
+    <div class="fl">
+        <a>
+            <img src="image/qqw.jpg" alt="巧装家秘密大改造">
+            <!--<img class="click" src="image/namic_2.png" alt="播放">-->
+        </a>
+        <p>何武贤盛赞巧装家 CCTV秘密大改造高潮迭起！</p>
+    </div>
+    <div class="fr">
+        <a href="" target="_blank">
+            <p>
+                <span>巧装家标准化家装公司级项目&mdash;四季怡园独家报道。2017-2018年3月，巧装家标准化家装多次在四季怡园举行小区专场活动，每次活动都为业主带来意想不到的惊喜。巧装家标准化秉承&l ··· ···</span>
+            </p>
+            <img src="image/namic_3.png">
+        </a>
+        <a href="" target="_blank">
+            <p>
+                <span>炎炎夏日，做什么都提不起精神？可是，酷暑也无法抵挡巧装家人前进的脚步和认真的工作态度！就在近期，巧装家标准化家装在冠华苑举行了两场小区专场活动，交订数量更是突破了100户！作为独家指定可进 ··· ···</span>
+            </p>
+            <img src="image/namic_3.png">
+        </a>
+        <a href="" target="_blank">
+            <p>
+                <span>今年9月，巧装家将迎来自己四周岁的生日啦。这个生日，是展望也是归零。﻿巧装家的爱里应该有谦卑，有虔诚，有感恩。我们感谢这四年来，我们的合作伙伴，信任我们的客户，有了你们我们才得以成长。至今，爱 ··· ···</span>
+            </p>
+            <img src="image/namic_3.png">
+        </a>
+    </div>
+</div>
+<!--品牌价值-->
+<div class="homePrice">
+    <div class="width1200 fm ovh">
+        <!--年、天-->
+        <div class="homePriceIkj">
+            <b class="year"></b>3年<b class="day"></b>从0到10亿
+        </div>
+        <!--信息-->
+        <img class="houmePriceXin" src="image/price_xin.jpg" alt="30000位客户 21个城市 10000名产业工人2000000位人工">
+        <!--5确定-->
+        <ul class="homePrice5qd">
+            <li>
+                <img class="homePriceIcon" src="image/price_1.jpg" alt="价格">
+                <img class="homePriceImg" src="image/price_1_1.jpg" alt="确定的价格">
+                <h3>确定的价格</h3>
+                <p>28项精装全包，方案提前敲定0增项，平米报价闭合合同</p>
+            </li>
+            <li>
+                <img class="homePriceIcon" src="image/price_2.jpg" alt="效果">
+                <img class="homePriceImg" src="image/price_2_1.jpg" alt="确定的效果">
+                <h3>确定的效果</h3>
+                <p>36项人性化细节，逾1100标准SKU,实景样板间，所见即所得</p>
+            </li>
+            <li>
+                <img class="homePriceIcon" src="image/price_3.jpg" alt="工期">
+                <img class="homePriceImg" src="image/price_3_1.jpg" alt="确定的工期">
+                <h3>确定的工期</h3>
+                <p>16个工种流水线施工，系统分配，工料无缝衔接</p>
+            </li>
+            <li>
+                <img class="homePriceIcon" src="image/price_5.jpg" alt="品质">
+                <img class="homePriceImg" src="image/price_4_1.jpg" alt="确定的品质">
+                <h3>确定的品质</h3>
+                <p>名品材料40道质检，23个标准仓储流程；直管工人102项考核，16道工序标准操作</p>
+
+            </li>
+            <li class="mr0 hover">
+                <img class="homePriceIcon" src="image/price_4.jpg" alt="服务">
+                <img class="homePriceImg" src="image/price_5_1.jpg" alt="确定的服务">
+                <h3>确定的服务</h3>
+                <p>1对1私属管家，信息全程透明，一站解决工程问题</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--报价框开始-->
+<div class="qzoffer">
+    <!--顶部小人-->
+    <div class="qzoffer-top">
+        <div class="qzoffer-img">
+            <img src="image/people.png" alt="">
+        </div>
+        <p>装修该花多少钱？提前算一算</p>
+        <div class="qzoffer-image"></div>
+    </div>
+    <!--中间内容-->
+    <div class="qzoffer-bottom">
+        <div class="qzoffer-budget">
+            <h3>装修计算器 <span>今天已有<em>1582</em>位业主获取了装修预算</span></h3>
+            <div class="qzoffer-form">
+                <div class="qzoffer-form-list">
+                    <p>所在城市:<span>*</span></p>
+                    <div class="qzoffer-select">
+                        <select name="" id="select-city">
+                            <option value="">北京</option>
+                        </select>
+                        <select name="" id="select-dist">
+                            <option value="">东城区</option>
+                            <option value="">西城区</option>
+                            <option value="">海淀区</option>
+                            <option value="">丰台区</option>
+                            <option value="">朝阳区</option>
+                            <option value="">昌平区</option>
+                            <option value="">通州区</option>
+                            <option value="">大兴区</option>
+                            <option value="">顺义区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="qzoffer-form-list">
+                    <p>房屋面积:<span>*</span></p>
+                    <div class="qzoffer-select">
+                        <input type="text" placeholder="输入您的房屋面积">
+                        <span>㎡</span>
+                    </div>
+                </div>
+                <div class="qzoffer-form-list qzoffer-form-listdo">
+                    <p>房屋户型:<span>*</span></p>
+                    <div class="qzoffer-selectdo">
+                        <div class="qzoffer-selectdo-top">
+                            <select name="" class="qzoffer-home">
+                                <option value="">1室</option>
+                                <option value="">2室</option>
+                                <option value="">3室</option>
+                                <option value="">4室</option>
+                                <option value="">5室</option>
+                                <option value="">6室</option>
+                            </select>
+                            <select name="" class="qzoffer-home">
+                                <option value="">1厅</option>
+                                <option value="">2厅</option>
+                                <option value="">3厅</option>
+                                <option value="">4厅</option>
+                                <option value="">5厅</option>
+                                <option value="">6厅</option>
+                            </select>
+                            <select name="" class="qzoffer-home">
+                                <option value="">1厨</option>
+                                <option value="">2厨</option>
+                                <option value="">3厨</option>
+                            </select>
+                        </div>
+                        <div class="qzoffer-selectdo-bottom">
+                            <select name="" class="qzoffer-rest">
+                                <option value="">1卫生间</option>
+                                <option value="">2卫生间</option>
+                                <option value="">3卫生间</option>
+                                <option value="">4卫生间</option>
+                                <option value="">5卫生间</option>
+                                <option value="">6卫生间</option>
+                            </select>
+                            <select name="" class="qzoffer-rest">
+                                <option value="">1阳台</option>
+                                <option value="">2阳台</option>
+                                <option value="">3阳台</option>
+                                <option value="">4阳台</option>
+                                <option value="">5阳台</option>
+                                <option value="">6阳台</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="qzoffer-form-list">
+                    <p>手机号码:<span>*</span></p>
+                    <div class="qzoffer-select">
+                        <input type="text" placeholder="报价结果将发送到您的手机">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qzoffer-cost">
+            <p class="qzoffer-cost-budget">您的装修预算 <span>111111</span><em>元</em></p>
+            <p class="qzoffer-cost-material">
+                <span>材料费:<i class="qzoffer-cost-num1">111111</i><em>元</em></span>
+                <span>人工费:<i class="qzoffer-cost-num2">111111</i><em>元</em></span>
+                <span>设计费:<i class="qzoffer-cost-num3">111111</i><em>元</em></span>
+                <span>质检费:<i class="qzoffer-cost-num4">111111</i><em>元</em></span>
+            </p>
+        </div>
+        <!--计算定位-->
+        <a href="javascript:;" class="qzoffer-star">
+            <p class="qzoffer-circle-shadow"></p>
+            <p class="qzoffer-circle">开始<br>计算</p>
+        </a>
+    </div>
+
+</div>
+<!--弹框-->
+<div class="hdMask"></div>
+<div class="resPop">
+    <span class="close">关闭</span>
+    <h3>风格测试结果查询</h3>
+    <h4>请填写有效信息 查看测试结果</h4>
+    <p>
+        <label>所在城市</label>
+        <select id="areaCode2">
+            <option value="">请选择区</option>
+
+            <option value="101">朝阳区</option>
+
+            <option value="201">大兴区</option>
+
+            <option value="301">丰台区</option>
+
+            <option value="401">西城区</option>
+
+            <option value="402">东城区</option>
+
+            <option value="303">通州区</option>
+
+            <option value="202">石景山区</option>
+
+            <option value="403">海定区</option>
+
+            <option value="304">昌平区</option>
+
+            <option value="305">顺义区</option>
+
+        </select>
+    </p>
+    <p>
+        <label>您的称呼</label>
+        <input class="inputText" name="userName2" type="text" value="" placeholder="请输入您的姓名">
+    </p>
+    <p>
+        <label>您的手机</label>
+        <input class="inputText" name="mobile2" type="text" value="" placeholder="请输入您的手机号">
+    </p>
+    <button id="button2">提交</button>
+</div>
+<script>
+    //预约弹框
+    $(".homeBrandTc,.backOrange,.backOrange1,.designer-btn").click(function () {
+        $(".hdMask,.resPop").show();
+    });
+    //关闭弹框
+    $(".resPop .close,.hdMask").click(function () {
+        $(".hdMask").hide();
+        $(".resPop").hide();
+    });
+    // 数字跳动
+    function Num() {
+        document.querySelector(".qzoffer-cost-budget>span").innerHTML = Math.floor(Math.random() * (200000 - 10000) + 25);
+        document.querySelector(".qzoffer-cost-num1").innerHTML = Math.floor(Math.random() * (200000 - 10000) + 25);
+        document.querySelector(".qzoffer-cost-num2").innerHTML = Math.floor(Math.random() * (200000 - 10000) + 25);
+        document.querySelector(".qzoffer-cost-num3").innerHTML = Math.floor(Math.random() * (200000 - 10000) + 25);
+        document.querySelector(".qzoffer-cost-num4").innerHTML = Math.floor(Math.random() * (200000 - 10000) + 25);
+    }
+
+    setInterval(Num, 200);
+
+
+    // 装修计算器弹出下放
+    $(".qzoffer-top").on('click', function () {
+        $(this).parent().toggleClass("qzofferdo");
+        $(this).find('.qzoffer-image').toggleClass('qzoffer-image-down')
+    })
+    //banner
+    $(".homeBanner ul").cycle({
+        /* fx: 'scrollLeft', */
+        fx: 'scrollHorz',
+        timeout: 3000,
+        pause: 1,
+        pager: '.houmeNumber',
+        prev: '.houmePrev',
+        next: '.houmeNext',
+        pagerEvent: 'mouseover',
+        cleartype: !$.support.opacity,
+        activePagerClass: 'hover',
+        pagerAnchorBuilder: function (idx, slide) {
+            idx += 1;
+            return '<span href="javascript:void(0)" class="num' + idx + '">' + +'</span>';
+        }
+    });
+    //品牌实力
+    $('.homeBrand').addClass('hover');
+    $(".homeBrandBanner ul").cycle({
+        fx: 'fade',
+        timeout: 0,
+        pause: 1,
+        pager: '.homeBrandNumber',
+        next: '.homeBrandNext',
+        pagerEvent: 'mouseover',
+        cleartype: !$.support.opacity,
+        activePagerClass: 'hover',
+        pagerAnchorBuilder: function (idx, slide) {
+            idx += 1;
+            return '<span href="javascript:void(0)" class="num' + idx + '">' + +'</span>';
+        }
+    });
+    $('.homeBrandNext,.homeBrandNumber span').click(function () {
+        var brandNum = $('.homeBrandNumber .hover').index();
+        $('.homeBrandBanner li .left.htm'/*tpa=http://sh.ikongjian.com/.homeBrandBanner li .left*/).removeClass('hover');
+        $('.homeBrandBanner li').eq(brandNum).find('.left').addClass('hover');
+
+    });
+    $('.homeBrandNumber span').hover(function () {
+        var brandNum = $('.homeBrandNumber .hover').index();
+        $('.homeBrandBanner li .left.htm'/*tpa=http://sh.ikongjian.com/.homeBrandBanner li .left*/).removeClass('hover');
+        $('.homeBrandBanner li').eq(brandNum).find('.left').addClass('hover');
+    });
+    //3D体验馆
+    $('.home3dSlider .bd li').eq('0').find('.home3dName').addClass('hover');
+    $(".home3dSlider").slide({
+        titCell: ".hd ul",
+        mainCell: ".bd ul",
+        effect: "leftLoop",
+        autoPlay: false,
+        vis: 1,
+        autoPage: true,
+        trigger: "click"
+    });
+    $('.pnBtn').click(function () {
+        $('.hd li[class="on"]').click();
+    })
+    $('.hd li').click(function () {
+        var hdLi = $(this).html();
+        $('.home3dSlider .bd li').find('.home3dName').removeClass('hover');
+        $('.home3dSlider .bd li').eq(hdLi).find('.home3dName').addClass('hover');
+    })
+    //经典案例
+    $("#homeCaseSlide").slide({
+        mainCell: ".bd ul",
+        effect: "fade",
+        autoPlay: false,
+        autoPage: false
+    });
+    $('#homeCase').sliphover();
+
+    //5确定
+    $('.homePrice5qd li').hover(function () {
+        $(this).addClass('hover').siblings().removeClass('hover');
+    });
+    //装修报价居室匹配
+    $("#huxing_Mj").keyup(function () {
+        var HxVal = $(this).val();
+        $(this).val($(this).val().replace(/[^0-9.]/g, ''));
+        if (HxVal >= 1 && HxVal <= 60) {
+            $('#Huxing').find('select').eq('0').val('1室');
+            $('#Huxing').find('select').eq('1').val('1厅');
+            $('#Huxing').find('select').eq('2').val('1厨');
+            $('#Huxing').find('select').eq('3').val('1卫');
+        }
+        ;
+        if (HxVal >= 61 && HxVal <= 90) {
+            $('#Huxing').find('select').eq('0').val('2室');
+            $('#Huxing').find('select').eq('1').val('1厅');
+            $('#Huxing').find('select').eq('2').val('1厨');
+            $('#Huxing').find('select').eq('3').val('1卫');
+        }
+        ;
+        if (HxVal >= 91 && HxVal <= 110) {
+            $('#Huxing').find('select').eq('0').val('3室');
+            $('#Huxing').find('select').eq('1').val('1厅');
+            $('#Huxing').find('select').eq('2').val('1厨');
+            $('#Huxing').find('select').eq('3').val('1卫');
+        }
+        ;
+        if (HxVal >= 111 && HxVal <= 130) {
+            $('#Huxing').find('select').eq('0').val('3室');
+            $('#Huxing').find('select').eq('1').val('2厅');
+            $('#Huxing').find('select').eq('2').val('1厨');
+            $('#Huxing').find('select').eq('3').val('1卫');
+        }
+        ;
+        if (HxVal >= 131 && HxVal <= 150) {
+            $('#Huxing').find('select').eq('0').val('3室');
+            $('#Huxing').find('select').eq('1').val('2厅');
+            $('#Huxing').find('select').eq('2').val('1厨');
+            $('#Huxing').find('select').eq('3').val('2卫');
+        }
+        ;
+        if (HxVal >= 151) {
+            $('#Huxing').find('select').eq('0').val('4室');
+            $('#Huxing').find('select').eq('1').val('2厅');
+            $('#Huxing').find('select').eq('2').val('1厨');
+            $('#Huxing').find('select').eq('3').val('2卫');
+        }
+        ;
+    }).bind("paste", function () {
+        $(this).val($(this).val().replace(/[^0-9.]/g, ''));
+
+    }).css("ime-mode", "disabled");
+    //浏览器滚动动画
+    $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        $('.active').each(function () {
+            var offset = $(this).data('offset') ? $(this).data('offset') : 0;
+            if (top >= $(this).offset().top - offset) {
+                $(this).addClass('hover');
+            }
+        });
+    });
+    //浏览器宽度改变
+    $(window).resize(function () {
+        $(".homeBanner ul li").removeAttr('style')
+        $(".homeBanner ul").cycle({
+            /* fx: 'scrollLeft', */
+            fx: 'scrollHorz',
+            timeout: 0,
+            pause: 1,
+            pager: '.houmeNumber ',
+            pagerEvent: 'mouseover',
+            cleartype: !$.support.opacity,
+            activePagerClass: 'hover',
+            pagerAnchorBuilder: function (idx, slide) {
+                return '';
+                idx += 1;
+                return '<span href="javascript:void(0)" class="num' + idx + '">' + +'</span>';
+            }
+        });
+    })
+
+</script>
+<!--尾部-->
+<div class="footer">
+    <div class="width1200">
+        <div class="fl">
+            <ul>
+                <li><a href="about.htm" target="_blank" rel="nofollow">关于我们</a>
+                </li>
+                <li><a href="showroom.htm" target="_blank"
+                       rel="nofollow">展厅地址</a></li>
+                <!-- <li><a href="/shunwei" target="_blank">资本支持</a></li> -->
+                <li><a href="news/list.htm" target="_blank" rel="nofollow">品牌动态</a>
+                </li>
+                <li><a href="contactUs.htm" target="_blank" rel="nofollow">联系我们</a>
+                </li>
+                <li><a href="jobs/index.htm" target="_blank" rel="nofollow">加入我们</a>
+                </li>
+                <li><a href="feedback/index.htm" target="_blank" rel="nofollow">意见反馈</a></li>
+            </ul>
+            <p class="tel">400-678-3928</p>
+            <p>
+                免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。 www.jzzs.com 巧装家装饰网和设计师社区 保留所有权利
+            </p>
+            <p class="ff0"></p>
+        </div>
+        <div class="fr">
+            <span>
+                <img src="image/app.jpg" alt="巧装家微信小程序">
+                <i>巧装家微信小程序</i>
+            </span>
+        </div>
+    </div>
+    <strong>Copyright ®2017 巧装家科技（北京）有限公司 版权所有京ICP备15007819号-1</strong>
+</div>
+
+<script>
+    var designerSwiper = new Swiper('.index-designer-content .swiper-container', {
+        watchSlidesProgress: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 3,
+        autoplay: 0,
+        speed: 1200,
+        observer: true,
+        observeParents: true,
+        pagination: ".index-designer-content .swiper-pagination",
+        paginationClickable: !0,
+        nextButton: ".index-designer-content .swiper-button-next",
+        prevButton: ".index-designer-content .swiper-button-prev",
+        onProgress: function (swiper, progress) {
+            for (i = 0; i < swiper.slides.length; i++) {
+                var slide = swiper.slides.eq(i);
+                var slideProgress = swiper.slides[i].progress;
+                if (Math.abs(slideProgress) > swiper.slides.length / 2) {
+                    slideProgress = slideProgress > 0 ? -(slideProgress - swiper.slides.length / 2) : Math.abs(slideProgress + swiper.slides.length / 2);
+                }
+                translate = slideProgress * 620 + 'px';
+                scale = 1 - Math.abs(slideProgress) / 3;
+                if (Math.abs(scale) > 1) {
+                    scale = .667;
+                }
+                zIndex = 99 - Math.abs(Math.round(6 * slideProgress));
+                slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                slide.css('zIndex', zIndex);
+            }
+        },
+        onSlideChangeStart: function (swiper) {
+            $(document).mousemove(function (e) {
+                e.preventDefault();
+            });
+        },
+        onSlideChangeEnd: function (swiper) {
+            $(document).unbind('mousemove');
+        },
+        onSetTransition: function (swiper, transiton) {
+            for (var i = 0; i < swiper.slides.length; i++) {
+                var slide = swiper.slides.eq(i);
+                slide.transition(transiton);
+            }
+        }
+    });
+</script>
+</body>
+</html>
